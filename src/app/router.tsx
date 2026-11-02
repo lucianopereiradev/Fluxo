@@ -10,6 +10,11 @@ const OverviewPage = lazy(() => import('@/features/overview/OverviewPage'));
 const TransactionsPage = lazy(() => import('@/features/transactions/TransactionsPage'));
 const AccountsPage = lazy(() => import('@/features/accounts/AccountsPage'));
 const CardsPage = lazy(() => import('@/features/cards/CardsPage'));
+const BudgetsPage = lazy(() => import('@/features/budgets/BudgetsPage'));
+const GoalsPage = lazy(() => import('@/features/goals/GoalsPage'));
+const RecurringPage = lazy(() => import('@/features/recurring/RecurringPage'));
+const ReportsPage = lazy(() => import('@/features/reports/ReportsPage'));
+const SettingsPage = lazy(() => import('@/features/settings/SettingsPage'));
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +30,11 @@ export const router = createBrowserRouter([
           { path: 'transactions', element: <TransactionsPage /> },
           { path: 'accounts', element: <AccountsPage /> },
           { path: 'cards', element: <CardsPage /> },
+          { path: 'budgets', element: <BudgetsPage /> },
+          { path: 'goals', element: <GoalsPage /> },
+          { path: 'recurring', element: <RecurringPage /> },
+          { path: 'reports', element: <ReportsPage /> },
+          { path: 'settings', element: <SettingsPage /> },
           { path: '*', element: <NotFoundPage inApp /> },
         ],
       },
