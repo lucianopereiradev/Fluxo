@@ -1,1 +1,186 @@
 @import 'tailwindcss';
+@import '@fontsource-variable/geist';
+@import '@fontsource-variable/fraunces/soft.css';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/*
+ * Fluxo palette: warm paper and graphite, a copper accent, and moss / brick reserved for
+ * money direction (always paired with a sign or icon, never color alone).
+ */
+:root {
+  color-scheme: light;
+  --c-bg: #f4f1ea;
+  --c-surface: #fbfaf6;
+  --c-surface-2: #eeeae1;
+  --c-surface-3: #e5e0d4;
+  --c-border: #ddd6c8;
+  --c-border-strong: #c9c0ae;
+  --c-text: #1d1c1a;
+  --c-text-muted: #625d54;
+  --c-text-faint: #857f74;
+  --c-accent: #a84c26;
+  --c-accent-strong: #8e3e1d;
+  --c-accent-soft: #f1dfd3;
+  --c-on-accent: #fffaf5;
+  --c-positive: #3b6b4b;
+  --c-positive-soft: #dde9df;
+  --c-negative: #a3362f;
+  --c-negative-soft: #f3dcd8;
+  --c-warning: #87590c;
+  --c-warning-soft: #f2e5c8;
+  --c-focus: #a84c26;
+  --c-chart-1: #a84c26;
+  --c-chart-2: #3f6e6a;
+  --c-chart-3: #c9822b;
+  --c-chart-4: #6d6a8f;
+  --c-chart-5: #8a5a8c;
+  --c-chart-6: #5f7d4f;
+  --shadow-soft: 0 1px 0 rgb(29 28 26 / 4%), 0 8px 24px -12px rgb(29 28 26 / 18%);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --c-bg: #131312;
+  --c-surface: #1b1a19;
+  --c-surface-2: #23221f;
+  --c-surface-3: #2d2b28;
+  --c-border: #33312d;
+  --c-border-strong: #47443e;
+  --c-text: #ece8e0;
+  --c-text-muted: #aaa397;
+  --c-text-faint: #8a8478;
+  --c-accent: #e3855a;
+  --c-accent-strong: #f09a72;
+  --c-accent-soft: #3a2519;
+  --c-on-accent: #1b1208;
+  --c-positive: #8fc29d;
+  --c-positive-soft: #1f3226;
+  --c-negative: #f09085;
+  --c-negative-soft: #3d201d;
+  --c-warning: #e2b763;
+  --c-warning-soft: #3a2e16;
+  --c-focus: #f09a72;
+  --c-chart-1: #e3855a;
+  --c-chart-2: #79b0a9;
+  --c-chart-3: #e0a65a;
+  --c-chart-4: #a6a3cf;
+  --c-chart-5: #c79bc9;
+  --c-chart-6: #9fbf8a;
+  --shadow-soft: 0 1px 0 rgb(0 0 0 / 30%), 0 10px 30px -14px rgb(0 0 0 / 60%);
+}
+
+@theme inline {
+  --color-bg: var(--c-bg);
+  --color-surface: var(--c-surface);
+  --color-surface-2: var(--c-surface-2);
+  --color-surface-3: var(--c-surface-3);
+  --color-border: var(--c-border);
+  --color-border-strong: var(--c-border-strong);
+  --color-text: var(--c-text);
+  --color-muted: var(--c-text-muted);
+  --color-faint: var(--c-text-faint);
+  --color-accent: var(--c-accent);
+  --color-accent-strong: var(--c-accent-strong);
+  --color-accent-soft: var(--c-accent-soft);
+  --color-on-accent: var(--c-on-accent);
+  --color-positive: var(--c-positive);
+  --color-positive-soft: var(--c-positive-soft);
+  --color-negative: var(--c-negative);
+  --color-negative-soft: var(--c-negative-soft);
+  --color-warning: var(--c-warning);
+  --color-warning-soft: var(--c-warning-soft);
+  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
+  --shadow-soft: var(--shadow-soft);
+  --radius-xl: 0.875rem;
+  --radius-2xl: 1.25rem;
+}
+
+@layer base {
+  html {
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    min-height: 100dvh;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  ::selection {
+    background: var(--c-accent-soft);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--c-focus);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  dialog::backdrop {
+    background: rgb(20 18 15 / 45%);
+    backdrop-filter: blur(2px);
+  }
+}
+
+@layer utilities {
+  .tnum {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-variation-settings: 'SOFT' 60;
+  }
+
+  .privacy-on .money {
+    filter: blur(7px);
+    user-select: none;
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+}
+
+/* Gentle motion that disappears for people who ask for less. */
+@keyframes fluxo-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-rise {
+  animation: fluxo-rise 260ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.money {
+  transition: filter 180ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

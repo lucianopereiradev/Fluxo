@@ -1,0 +1,355 @@
+{
+  "common": {
+    "all": "All",
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "choose": "Choose…",
+    "close": "Close",
+    "color": "Color",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "done": "Done",
+    "loading": "Loading",
+    "nextMonth": "Next month",
+    "none": "None",
+    "previousMonth": "Previous month",
+    "required": "Required",
+    "save": "Save",
+    "seeAll": "See all",
+    "today": "Today"
+  },
+  "nav": {
+    "main": "Main navigation",
+    "home": "Fluxo home",
+    "skip": "Skip to content",
+    "more": "More",
+    "overview": "Overview",
+    "transactions": "Transactions",
+    "accounts": "Accounts",
+    "cards": "Cards",
+    "budgets": "Budgets",
+    "goals": "Goals",
+    "recurring": "Recurring",
+    "reports": "Reports",
+    "import": "Import",
+    "settings": "Settings"
+  },
+  "theme": {
+    "toggle": "Theme: {{theme}}. Change theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "Automatic"
+  },
+  "privacy": {
+    "hide": "Hide amounts",
+    "show": "Show amounts",
+    "hiddenAmount": "Amount hidden"
+  },
+  "palette": {
+    "open": "Search and commands"
+  },
+  "quickEntry": {
+    "button": "New entry"
+  },
+  "sync": {
+    "status": {
+      "local": "Your data is stored only on this device",
+      "localShort": "On this device"
+    }
+  },
+  "demo": {
+    "banner": "Demo mode",
+    "bannerHint": "Sample data, kept apart from your own.",
+    "startFresh": "Start fresh"
+  },
+  "landing": {
+    "title": "Your money, in flow. Your data, at home.",
+    "subtitle": "A calm, precise personal finance organizer that runs entirely on your device.",
+    "tryDemo": "Try the demo",
+    "startFresh": "Start fresh",
+    "openApp": "Open the app"
+  },
+  "notFound": {
+    "title": "This page wandered off",
+    "body": "The link may be broken, or the page was moved.",
+    "backHome": "Back to home",
+    "backToApp": "Back to overview"
+  },
+  "categories": {
+    "uncategorized": "Uncategorized",
+    "system": {
+      "salary": "Salary",
+      "freelance": "Freelance",
+      "investmentIncome": "Investment income",
+      "otherIncome": "Other income",
+      "housing": "Housing",
+      "food": "Food & dining",
+      "groceries": "Groceries",
+      "transport": "Transport",
+      "health": "Health",
+      "education": "Education",
+      "leisure": "Leisure",
+      "shopping": "Shopping",
+      "subscriptions": "Subscriptions",
+      "bills": "Bills & utilities",
+      "travel": "Travel",
+      "pets": "Pets",
+      "personalCare": "Personal care",
+      "taxes": "Taxes & fees",
+      "otherExpense": "Other expenses"
+    }
+  },
+  "overview": {
+    "title": "Overview",
+    "totalBalance": "Total balance",
+    "safeToSpend": "Safe to spend today",
+    "perDay_one": "per day · {{count}} day left this month",
+    "perDay_other": "per day · {{count}} days left this month",
+    "tapForDetails": "Tap to see how this is calculated",
+    "deficitTitle": "Nothing safe to spend",
+    "deficitBody": "Bills due this month exceed your balance by",
+    "breakdownTitle": "How “safe to spend” works",
+    "breakdownBody": "Your checking and wallet balances, minus what is still due this month, split across the days left.",
+    "lines": {
+      "balance": "Checking + wallet balance",
+      "upcoming": "Recurring and scheduled expenses due",
+      "invoices": "Unpaid card invoices due",
+      "goals": "Planned goal contributions",
+      "available": "Left for the month",
+      "daysLeft": "Days left (including today)",
+      "perDay": "Safe to spend per day",
+      "itemsTitle": "Still due this month"
+    },
+    "kinds": {
+      "recurring": "Recurring",
+      "scheduled": "Scheduled",
+      "invoice": "Card invoice",
+      "goal": "Goal"
+    },
+    "budgetAlerts": "Budget alerts",
+    "forecast": "Next 90 days",
+    "forecastLabel": "Projected balance for the next 90 days",
+    "in90days": "In 90 days",
+    "lowest": "Lowest",
+    "negativeOn": "Goes negative on {{date}}",
+    "upcoming": "Upcoming",
+    "noUpcoming": "Nothing due in the next 30 days",
+    "invoiceOf": "{{card}} invoice",
+    "spendingByCategory": "Spending in {{month}}",
+    "noSpending": "No spending yet this month",
+    "openInvoices": "Card invoices",
+    "noInvoices": "No open invoices",
+    "empty": {
+      "title": "Let’s set up your first account",
+      "body": "Add the accounts you use — checking, wallet, savings — and Fluxo starts tracking. Everything stays on this device."
+    }
+  },
+  "transactions": {
+    "title": "Transactions",
+    "new": "New transaction",
+    "newTransfer": "Transfer",
+    "edit": "Edit transaction",
+    "type": "Type",
+    "types": {
+      "expense": "Expense",
+      "income": "Income",
+      "transfer": "Transfer"
+    },
+    "amount": "Amount",
+    "date": "Date",
+    "from": "From",
+    "to": "To",
+    "paidWith": "Paid with",
+    "receivedIn": "Received in",
+    "category": "Category",
+    "description": "Description",
+    "descriptionPlaceholder": "e.g. Lunch at the corner café",
+    "notes": "Notes",
+    "tags": "Tags",
+    "tagsHint": "Separate with commas.",
+    "tag": "Tag",
+    "tagPlaceholder": "e.g. trip",
+    "installments": "Installments",
+    "installmentsHelp": "Split this purchase into monthly installments.",
+    "installmentsHint_one": "{{count}} installment.",
+    "installmentsHint_other": "{{count}} monthly installments. Any rounding difference goes into the first one.",
+    "installmentOf": "Installment {{index}} of {{count}}",
+    "installmentShort": "{{index}}/{{count}}",
+    "billPaymentHint": "Sending money to a card pays its invoice.",
+    "needAccount": "Add an account or a card first.",
+    "created": "Transaction saved",
+    "createdInstallments_one": "{{count}} installment created",
+    "createdInstallments_other": "{{count}} installments created",
+    "updated": "Transaction updated",
+    "deleted": "Transaction deleted",
+    "scheduled": "Scheduled",
+    "search": "Search transactions",
+    "searchPlaceholder": "Search description, category, tag, amount…",
+    "filters": "Filters",
+    "clearFilters": "Clear filters",
+    "period": "Period",
+    "periods": {
+      "month": "Month",
+      "range": "Custom range",
+      "all": "All time"
+    },
+    "allTime": "All time",
+    "backToMonth": "Back to this month",
+    "fromDate": "From",
+    "toDate": "To",
+    "accountOrCard": "Account or card",
+    "count_one": "{{count}} transaction",
+    "count_other": "{{count}} transactions",
+    "select": "Select {{name}}",
+    "selectDay": "Select all on {{date}}",
+    "noResults": "No transactions match",
+    "exportCsv": "Export CSV",
+    "empty": {
+      "title": "No transactions this month",
+      "body": "Add one manually, use quick entry (N) or import a bank statement."
+    },
+    "bulk": {
+      "title": "Bulk actions",
+      "selected_one": "{{count}} selected",
+      "selected_other": "{{count}} selected",
+      "category": "Change category",
+      "tag": "Add tag",
+      "clear": "Clear selection",
+      "deleteTitle_one": "Delete {{count}} transaction?",
+      "deleteTitle_other": "Delete {{count}} transactions?",
+      "deleteBody": "They will be removed from all devices on the next sync.",
+      "done_one": "{{count}} transaction updated",
+      "done_other": "{{count}} transactions updated"
+    },
+    "scope": {
+      "legend": "Apply to",
+      "editTitle": "Edit installments",
+      "deleteTitle": "Delete installments",
+      "this": "Only this installment",
+      "thisAndNext": "This and the following installments"
+    },
+    "errors": {
+      "amount": "Enter an amount greater than zero.",
+      "date": "Enter a valid date.",
+      "source": "Choose an account or card.",
+      "transferSource": "Transfers start from an account.",
+      "target": "Choose where the money goes.",
+      "sameAccount": "Choose a different account."
+    }
+  },
+  "accounts": {
+    "title": "Accounts",
+    "add": "Add account",
+    "edit": "Edit account",
+    "editNamed": "Edit {{name}}",
+    "name": "Name",
+    "namePlaceholder": "e.g. Nubank",
+    "type": "Type",
+    "types": {
+      "checking": "Checking",
+      "savings": "Savings",
+      "wallet": "Wallet / cash",
+      "investment": "Investment"
+    },
+    "initialBalance": "Opening balance",
+    "archived": "Archived",
+    "archivedHint": "Hidden from pickers; history is kept.",
+    "total": "Total:",
+    "scheduled": "Scheduled:",
+    "viewTransactions": "View transactions",
+    "created": "Account added",
+    "updated": "Account updated",
+    "deleted": "Account deleted",
+    "deleteTitle": "Delete this account?",
+    "deleteBody": "Its transactions stay in your history. You can archive it instead to keep it out of the way.",
+    "empty": {
+      "title": "No accounts yet",
+      "body": "Add your checking account, a wallet for cash, or savings."
+    }
+  },
+  "cards": {
+    "title": "Credit cards",
+    "add": "Add card",
+    "edit": "Edit card",
+    "editNamed": "Edit {{name}}",
+    "name": "Name",
+    "namePlaceholder": "e.g. Inter Gold",
+    "limit": "Credit limit",
+    "closingDay": "Closing day",
+    "closingHint": "Purchases on this day or later go to the next invoice.",
+    "dueDay": "Due day",
+    "paymentAccount": "Pays from",
+    "available": "Available limit",
+    "limitUsed": "Limit used",
+    "closesOn": "Closes on day {{day}}",
+    "dueOnDay": "Due on day {{day}}",
+    "dueOn": "due {{date}}",
+    "invoice": "Invoice",
+    "invoices": "Invoices",
+    "latestClosed": "Latest closed invoice",
+    "closing": "Closes",
+    "due": "Due",
+    "status": {
+      "open": "Open",
+      "closed": "Closed",
+      "paid": "Paid",
+      "future": "Future"
+    },
+    "overdue": "Overdue",
+    "paidAmount": "Paid:",
+    "remaining": "Remaining:",
+    "pay": "Pay invoice",
+    "payTitle": "Pay {{card}}",
+    "partialHint": "Partial payments are fine; the rest stays on the invoice.",
+    "paymentDescription": "{{card}} invoice · {{month}}",
+    "payment": "Payment",
+    "paid": "Invoice paid",
+    "partialPaid": "Partial payment recorded",
+    "emptyInvoice": "No purchases on this invoice",
+    "created": "Card added",
+    "updated": "Card updated",
+    "deleted": "Card deleted",
+    "deleteTitle": "Delete this card?",
+    "deleteBody": "Its purchases stay in your history.",
+    "empty": {
+      "title": "No cards yet",
+      "body": "Add a credit card to follow invoices, installments and your available limit."
+    }
+  },
+  "budgets": {
+    "near": "Near limit",
+    "over": "Over budget"
+  },
+  "recurring": {
+    "badge": "Recurring"
+  },
+  "privacyPage": {
+    "title": "Privacy",
+    "lead": "Short version: your financial data never leaves your device unless you turn on encrypted sync — and even then, nobody but you can read it.",
+    "local": {
+      "title": "Stored on your device",
+      "body": "Accounts, transactions and everything else live in your browser’s IndexedDB. There is no account to create and no login."
+    },
+    "noAccount": {
+      "title": "No account, no profile",
+      "body": "Fluxo does not know who you are. There is no email, no password and no user database."
+    },
+    "sync": {
+      "title": "Optional end-to-end encrypted sync",
+      "body": "If you enable sync, your data is encrypted on your device with a key derived from your passphrase before it is uploaded. The passphrase never leaves your device."
+    },
+    "server": {
+      "title": "What the server sees",
+      "body": "Only an opaque encrypted blob, its size, a version number and timestamps. It cannot decrypt the contents, and it stores only a hash of your access token."
+    },
+    "analytics": {
+      "title": "No tracking",
+      "body": "No analytics, no ads, no third-party scripts and no cookies."
+    },
+    "control": {
+      "title": "You are in control",
+      "body": "Export a full backup at any time, delete everything from Settings, or delete your sync vault from the server."
+    },
+    "updated": "Last updated November 2026."
+  }
+}

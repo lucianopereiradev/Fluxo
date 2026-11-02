@@ -1,0 +1,355 @@
+{
+  "common": {
+    "all": "Todos",
+    "apply": "Aplicar",
+    "cancel": "Cancelar",
+    "choose": "Escolha…",
+    "close": "Fechar",
+    "color": "Cor",
+    "confirm": "Confirmar",
+    "delete": "Excluir",
+    "done": "Pronto",
+    "loading": "Carregando",
+    "nextMonth": "Próximo mês",
+    "none": "Nenhuma",
+    "previousMonth": "Mês anterior",
+    "required": "Obrigatório",
+    "save": "Salvar",
+    "seeAll": "Ver tudo",
+    "today": "Hoje"
+  },
+  "nav": {
+    "main": "Navegação principal",
+    "home": "Início do Fluxo",
+    "skip": "Pular para o conteúdo",
+    "more": "Mais",
+    "overview": "Visão geral",
+    "transactions": "Lançamentos",
+    "accounts": "Contas",
+    "cards": "Cartões",
+    "budgets": "Orçamentos",
+    "goals": "Metas",
+    "recurring": "Recorrentes",
+    "reports": "Relatórios",
+    "import": "Importar",
+    "settings": "Configurações"
+  },
+  "theme": {
+    "toggle": "Tema: {{theme}}. Trocar tema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Automático"
+  },
+  "privacy": {
+    "hide": "Ocultar valores",
+    "show": "Mostrar valores",
+    "hiddenAmount": "Valor oculto"
+  },
+  "palette": {
+    "open": "Busca e comandos"
+  },
+  "quickEntry": {
+    "button": "Novo lançamento"
+  },
+  "sync": {
+    "status": {
+      "local": "Seus dados ficam só neste aparelho",
+      "localShort": "Neste aparelho"
+    }
+  },
+  "demo": {
+    "banner": "Modo demonstração",
+    "bannerHint": "Dados fictícios, separados dos seus.",
+    "startFresh": "Começar do zero"
+  },
+  "landing": {
+    "title": "Seu dinheiro em fluxo. Seus dados em casa.",
+    "subtitle": "Um organizador de finanças calmo e preciso, que roda inteiro no seu aparelho.",
+    "tryDemo": "Ver demonstração",
+    "startFresh": "Começar do zero",
+    "openApp": "Abrir o app"
+  },
+  "notFound": {
+    "title": "Esta página se perdeu",
+    "body": "O link pode estar quebrado ou a página mudou de lugar.",
+    "backHome": "Voltar ao início",
+    "backToApp": "Voltar à visão geral"
+  },
+  "categories": {
+    "uncategorized": "Sem categoria",
+    "system": {
+      "salary": "Salário",
+      "freelance": "Freelance",
+      "investmentIncome": "Rendimentos",
+      "otherIncome": "Outras receitas",
+      "housing": "Moradia",
+      "food": "Alimentação",
+      "groceries": "Mercado",
+      "transport": "Transporte",
+      "health": "Saúde",
+      "education": "Educação",
+      "leisure": "Lazer",
+      "shopping": "Compras",
+      "subscriptions": "Assinaturas",
+      "bills": "Contas da casa",
+      "travel": "Viagens",
+      "pets": "Pets",
+      "personalCare": "Cuidados pessoais",
+      "taxes": "Impostos e tarifas",
+      "otherExpense": "Outras despesas"
+    }
+  },
+  "overview": {
+    "title": "Visão geral",
+    "totalBalance": "Saldo total",
+    "safeToSpend": "Quanto posso gastar hoje",
+    "perDay_one": "por dia · falta {{count}} dia no mês",
+    "perDay_other": "por dia · faltam {{count}} dias no mês",
+    "tapForDetails": "Toque para ver como é calculado",
+    "deficitTitle": "Nada livre para gastar",
+    "deficitBody": "As contas deste mês passam do seu saldo em",
+    "breakdownTitle": "Como funciona o “quanto posso gastar”",
+    "breakdownBody": "Saldo das contas correntes e carteira, menos o que ainda vence neste mês, dividido pelos dias restantes.",
+    "lines": {
+      "balance": "Saldo em conta corrente + carteira",
+      "upcoming": "Despesas recorrentes e agendadas a vencer",
+      "invoices": "Faturas de cartão a vencer",
+      "goals": "Aportes planejados nas metas",
+      "available": "Sobra para o mês",
+      "daysLeft": "Dias restantes (incluindo hoje)",
+      "perDay": "Pode gastar por dia",
+      "itemsTitle": "Ainda vence neste mês"
+    },
+    "kinds": {
+      "recurring": "Recorrente",
+      "scheduled": "Agendado",
+      "invoice": "Fatura do cartão",
+      "goal": "Meta"
+    },
+    "budgetAlerts": "Alertas de orçamento",
+    "forecast": "Próximos 90 dias",
+    "forecastLabel": "Saldo projetado para os próximos 90 dias",
+    "in90days": "Em 90 dias",
+    "lowest": "Menor saldo",
+    "negativeOn": "Fica negativo em {{date}}",
+    "upcoming": "Próximas contas",
+    "noUpcoming": "Nada vence nos próximos 30 dias",
+    "invoiceOf": "Fatura {{card}}",
+    "spendingByCategory": "Gastos em {{month}}",
+    "noSpending": "Nenhum gasto neste mês ainda",
+    "openInvoices": "Faturas",
+    "noInvoices": "Nenhuma fatura aberta",
+    "empty": {
+      "title": "Vamos criar sua primeira conta",
+      "body": "Adicione as contas que você usa — corrente, carteira, poupança — e o Fluxo começa a acompanhar. Tudo fica neste aparelho."
+    }
+  },
+  "transactions": {
+    "title": "Lançamentos",
+    "new": "Novo lançamento",
+    "newTransfer": "Transferência",
+    "edit": "Editar lançamento",
+    "type": "Tipo",
+    "types": {
+      "expense": "Despesa",
+      "income": "Receita",
+      "transfer": "Transferência"
+    },
+    "amount": "Valor",
+    "date": "Data",
+    "from": "De",
+    "to": "Para",
+    "paidWith": "Pago com",
+    "receivedIn": "Recebido em",
+    "category": "Categoria",
+    "description": "Descrição",
+    "descriptionPlaceholder": "Ex.: Almoço no restaurante da esquina",
+    "notes": "Observação",
+    "tags": "Tags",
+    "tagsHint": "Separe com vírgulas.",
+    "tag": "Tag",
+    "tagPlaceholder": "Ex.: viagem",
+    "installments": "Parcelas",
+    "installmentsHelp": "Divida esta compra em parcelas mensais.",
+    "installmentsHint_one": "{{count}} parcela.",
+    "installmentsHint_other": "{{count}} parcelas mensais. A diferença do arredondamento fica na primeira.",
+    "installmentOf": "Parcela {{index}} de {{count}}",
+    "installmentShort": "{{index}}/{{count}}",
+    "billPaymentHint": "Enviar dinheiro para um cartão paga a fatura dele.",
+    "needAccount": "Adicione uma conta ou um cartão primeiro.",
+    "created": "Lançamento salvo",
+    "createdInstallments_one": "{{count}} parcela criada",
+    "createdInstallments_other": "{{count}} parcelas criadas",
+    "updated": "Lançamento atualizado",
+    "deleted": "Lançamento excluído",
+    "scheduled": "Agendado",
+    "search": "Buscar lançamentos",
+    "searchPlaceholder": "Busque descrição, categoria, tag, valor…",
+    "filters": "Filtros",
+    "clearFilters": "Limpar filtros",
+    "period": "Período",
+    "periods": {
+      "month": "Mês",
+      "range": "Intervalo personalizado",
+      "all": "Todo o período"
+    },
+    "allTime": "Todo o período",
+    "backToMonth": "Voltar para este mês",
+    "fromDate": "De",
+    "toDate": "Até",
+    "accountOrCard": "Conta ou cartão",
+    "count_one": "{{count}} lançamento",
+    "count_other": "{{count}} lançamentos",
+    "select": "Selecionar {{name}}",
+    "selectDay": "Selecionar todos de {{date}}",
+    "noResults": "Nenhum lançamento encontrado",
+    "exportCsv": "Exportar CSV",
+    "empty": {
+      "title": "Nenhum lançamento neste mês",
+      "body": "Adicione manualmente, use o lançamento rápido (N) ou importe um extrato."
+    },
+    "bulk": {
+      "title": "Ações em massa",
+      "selected_one": "{{count}} selecionado",
+      "selected_other": "{{count}} selecionados",
+      "category": "Trocar categoria",
+      "tag": "Adicionar tag",
+      "clear": "Limpar seleção",
+      "deleteTitle_one": "Excluir {{count}} lançamento?",
+      "deleteTitle_other": "Excluir {{count}} lançamentos?",
+      "deleteBody": "Eles serão removidos de todos os aparelhos na próxima sincronização.",
+      "done_one": "{{count}} lançamento atualizado",
+      "done_other": "{{count}} lançamentos atualizados"
+    },
+    "scope": {
+      "legend": "Aplicar a",
+      "editTitle": "Editar parcelas",
+      "deleteTitle": "Excluir parcelas",
+      "this": "Só esta parcela",
+      "thisAndNext": "Esta e as próximas parcelas"
+    },
+    "errors": {
+      "amount": "Informe um valor maior que zero.",
+      "date": "Informe uma data válida.",
+      "source": "Escolha uma conta ou um cartão.",
+      "transferSource": "Transferências saem de uma conta.",
+      "target": "Escolha para onde vai o dinheiro.",
+      "sameAccount": "Escolha uma conta diferente."
+    }
+  },
+  "accounts": {
+    "title": "Contas",
+    "add": "Adicionar conta",
+    "edit": "Editar conta",
+    "editNamed": "Editar {{name}}",
+    "name": "Nome",
+    "namePlaceholder": "Ex.: Nubank",
+    "type": "Tipo",
+    "types": {
+      "checking": "Conta corrente",
+      "savings": "Poupança",
+      "wallet": "Carteira / dinheiro",
+      "investment": "Investimento"
+    },
+    "initialBalance": "Saldo inicial",
+    "archived": "Arquivada",
+    "archivedHint": "Some das listas de seleção; o histórico continua.",
+    "total": "Total:",
+    "scheduled": "Agendado:",
+    "viewTransactions": "Ver lançamentos",
+    "created": "Conta adicionada",
+    "updated": "Conta atualizada",
+    "deleted": "Conta excluída",
+    "deleteTitle": "Excluir esta conta?",
+    "deleteBody": "Os lançamentos continuam no histórico. Você pode arquivá-la em vez de excluir.",
+    "empty": {
+      "title": "Nenhuma conta ainda",
+      "body": "Adicione sua conta corrente, uma carteira para o dinheiro vivo ou a poupança."
+    }
+  },
+  "cards": {
+    "title": "Cartões de crédito",
+    "add": "Adicionar cartão",
+    "edit": "Editar cartão",
+    "editNamed": "Editar {{name}}",
+    "name": "Nome",
+    "namePlaceholder": "Ex.: Inter Gold",
+    "limit": "Limite",
+    "closingDay": "Dia do fechamento",
+    "closingHint": "Compras nesse dia ou depois vão para a fatura seguinte.",
+    "dueDay": "Dia do vencimento",
+    "paymentAccount": "Pago pela conta",
+    "available": "Limite disponível",
+    "limitUsed": "Limite usado",
+    "closesOn": "Fecha no dia {{day}}",
+    "dueOnDay": "Vence no dia {{day}}",
+    "dueOn": "vence {{date}}",
+    "invoice": "Fatura",
+    "invoices": "Faturas",
+    "latestClosed": "Última fatura fechada",
+    "closing": "Fecha",
+    "due": "Vence",
+    "status": {
+      "open": "Aberta",
+      "closed": "Fechada",
+      "paid": "Paga",
+      "future": "Futura"
+    },
+    "overdue": "Vencida",
+    "paidAmount": "Pago:",
+    "remaining": "Restante:",
+    "pay": "Pagar fatura",
+    "payTitle": "Pagar {{card}}",
+    "partialHint": "Pode pagar parcialmente; o restante continua na fatura.",
+    "paymentDescription": "Fatura {{card}} · {{month}}",
+    "payment": "Pagamento",
+    "paid": "Fatura paga",
+    "partialPaid": "Pagamento parcial registrado",
+    "emptyInvoice": "Nenhuma compra nesta fatura",
+    "created": "Cartão adicionado",
+    "updated": "Cartão atualizado",
+    "deleted": "Cartão excluído",
+    "deleteTitle": "Excluir este cartão?",
+    "deleteBody": "As compras continuam no histórico.",
+    "empty": {
+      "title": "Nenhum cartão ainda",
+      "body": "Adicione um cartão de crédito para acompanhar faturas, parcelas e o limite disponível."
+    }
+  },
+  "budgets": {
+    "near": "Perto do limite",
+    "over": "Estourado"
+  },
+  "recurring": {
+    "badge": "Recorrente"
+  },
+  "privacyPage": {
+    "title": "Privacidade",
+    "lead": "Resumo: seus dados financeiros nunca saem do seu aparelho, a não ser que você ative a sincronização criptografada — e, mesmo assim, só você consegue lê-los.",
+    "local": {
+      "title": "Guardado no seu aparelho",
+      "body": "Contas, lançamentos e todo o resto ficam no IndexedDB do seu navegador. Não há conta para criar nem login."
+    },
+    "noAccount": {
+      "title": "Sem conta, sem perfil",
+      "body": "O Fluxo não sabe quem você é. Não há e-mail, senha nem banco de usuários."
+    },
+    "sync": {
+      "title": "Sincronização opcional com criptografia de ponta a ponta",
+      "body": "Se você ativar a sincronização, os dados são cifrados no seu aparelho com uma chave derivada da sua frase-senha antes do envio. A frase-senha nunca sai do aparelho."
+    },
+    "server": {
+      "title": "O que o servidor vê",
+      "body": "Apenas um bloco cifrado e ilegível, o tamanho dele, um número de versão e datas. Ele não consegue decifrar o conteúdo e guarda só um hash do seu token de acesso."
+    },
+    "analytics": {
+      "title": "Sem rastreamento",
+      "body": "Sem analytics, sem anúncios, sem scripts de terceiros e sem cookies."
+    },
+    "control": {
+      "title": "Você no controle",
+      "body": "Exporte um backup completo quando quiser, apague tudo nas Configurações ou exclua seu cofre de sincronização do servidor."
+    },
+    "updated": "Atualizado em novembro de 2026."
+  }
+}

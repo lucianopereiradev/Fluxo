@@ -29,8 +29,27 @@ export const DEFAULT_CATEGORIES: readonly {
   { key: 'otherExpense', kind: 'expense', color: '#8a8173', icon: 'circle-dashed' },
 ];
 
+/**
+ * Built-in categories get fixed UUIDs (v7 layout with a zero timestamp) so seeding is
+ * idempotent and two devices that seed independently merge into the same records.
+ */
+export function systemCategoryId(index: number): string {
+  return `00000000-0000-7000-8000-${String(index + 1).padStart(12, '0')}`;
+}
+
 export function createDefaultCategories(): Category[] {
-  return DEFAULT_CATEGORIES.map((c) =>
-    makeCategory({ systemKey: c.key, kind: c.kind, color: c.color, icon: c.icon }),
+  return DEFAULT_CATEGORIES.map((c, i) =>
+    makeCategory({
+      id: systemCategoryId(i),
+      systemKey: c.key,
+      kind: c.kind,
+      color: c.color,
+      icon: c.icon,
+    }),
   );
+}
+
+export function systemCategoryIdByKey(key: string): string | null {
+  const index = DEFAULT_CATEGORIES.findIndex((c) => c.key === key);
+  return index >= 0 ? systemCategoryId(index) : null;
 }
