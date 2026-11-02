@@ -8,6 +8,7 @@ import { formatAmountInput, parseMoney } from '@/domain/money';
 import type { TransactionType } from '@/domain/types';
 import { createTransactions, deleteTransaction, updateTransaction } from '@/features/data/actions';
 import { useFinance, useFormat, useLocale } from '@/features/data/hooks';
+import { rememberCategory } from '@/features/data/learning';
 import { useUi } from '@/stores/ui';
 import { Field, Input, Segmented, Select, Textarea } from '@/ui/Field';
 import { Modal } from '@/ui/Modal';
@@ -128,6 +129,10 @@ export function TransactionEditor() {
       const patch = toPatch();
       if (existing) {
         await updateTransaction(existing, patch, scope);
+        // Correcting the category of an imported line teaches a categorization rule.
+        if (existing.importId && patch.categoryId && patch.categoryId !== existing.categoryId) {
+          await rememberCategory(existing.description, patch.categoryId);
+        }
         toast.success(t('transactions.updated'));
       } else {
         const created = await createTransactions({ ...patch, installments: values.installments });

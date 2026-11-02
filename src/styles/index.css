@@ -184,3 +184,12 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Sentence case for locale-formatted dates ("novembro de 2026" → "Novembro de 2026"). */
+.cap-first::first-letter {
+  text-transform: uppercase;
+}
+
+span.cap-first {
+  display: inline-block;
+}

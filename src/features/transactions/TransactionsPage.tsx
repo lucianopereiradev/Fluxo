@@ -215,10 +215,7 @@ export default function TransactionsPage() {
             >
               <ChevronLeft className="size-4" />
             </IconButton>
-            <span
-              className="min-w-36 text-center text-sm font-medium capitalize"
-              aria-live="polite"
-            >
+            <span className="cap-first min-w-36 text-center text-sm font-medium" aria-live="polite">
               {formatMonthLabel(period.month)}
             </span>
             <IconButton
@@ -367,7 +364,7 @@ export default function TransactionsPage() {
                     }
                     aria-label={t('transactions.selectDay', { date: date(day) })}
                   />
-                  <h2 className="flex-1 text-sm font-medium capitalize">
+                  <h2 className="cap-first flex-1 text-sm font-medium">
                     {day === data.today
                       ? t('common.today')
                       : date(day, { weekday: 'long', day: 'numeric', month: 'long' })}

@@ -162,7 +162,7 @@ function GoalCard({
             ) : p.etaMonth ? (
               <>
                 <Clock className="text-muted size-4" aria-hidden />
-                <span className="capitalize">
+                <span className="cap-first">
                   {month(p.etaMonth, { month: 'short', year: 'numeric' })}
                 </span>
               </>

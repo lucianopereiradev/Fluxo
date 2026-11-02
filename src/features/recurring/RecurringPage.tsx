@@ -226,7 +226,7 @@ function BillsCalendar() {
             >
               <ChevronLeft className="size-4" />
             </IconButton>
-            <h2 className="min-w-40 text-center font-medium capitalize" aria-live="polite">
+            <h2 className="cap-first min-w-40 text-center font-medium" aria-live="polite">
               {formatMonth(month)}
             </h2>
             <IconButton
@@ -248,7 +248,7 @@ function BillsCalendar() {
           <thead>
             <tr>
               {weekdayNames.map((d) => (
-                <th key={d} scope="col" className="text-muted pb-1 text-xs font-medium capitalize">
+                <th key={d} scope="col" className="text-muted cap-first pb-1 text-xs font-medium">
                   {d}
                 </th>
               ))}
@@ -302,7 +302,7 @@ function BillsCalendar() {
         </table>
       </Panel>
       <Panel className="p-4" aria-live="polite">
-        <h3 className="font-medium capitalize">
+        <h3 className="cap-first font-medium">
           {selected
             ? date(selected, { weekday: 'long', day: 'numeric', month: 'long' })
             : t('recurring.pickDay')}

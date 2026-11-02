@@ -494,7 +494,7 @@ function DataTable({ caption, head, rows }: { caption: string; head: string[]; r
             <tr key={r[0]} className="border-border border-t">
               {r.map((c, i) =>
                 i === 0 ? (
-                  <th key={i} scope="row" className="py-1.5 font-normal capitalize">
+                  <th key={i} scope="row" className="cap-first py-1.5 font-normal">
                     {c}
                   </th>
                 ) : (

@@ -63,7 +63,7 @@ export default function BudgetsPage() {
           >
             <ChevronLeft className="size-4" />
           </IconButton>
-          <span className="min-w-36 text-center text-sm font-medium capitalize" aria-live="polite">
+          <span className="cap-first min-w-36 text-center text-sm font-medium" aria-live="polite">
             {formatMonth(month)}
           </span>
           <IconButton

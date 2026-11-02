@@ -191,7 +191,7 @@ function CardDetail({ card, today, onEdit }: { card: Card; today: string; onEdit
                 : 'border-border hover:bg-surface-2',
             )}
           >
-            <span className="block font-medium capitalize">
+            <span className="cap-first block font-medium">
               {month(inv.month, { month: 'short', year: '2-digit' })}
             </span>
             <span className="tnum text-muted block">

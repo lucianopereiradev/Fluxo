@@ -14,6 +14,7 @@ const BudgetsPage = lazy(() => import('@/features/budgets/BudgetsPage'));
 const GoalsPage = lazy(() => import('@/features/goals/GoalsPage'));
 const RecurringPage = lazy(() => import('@/features/recurring/RecurringPage'));
 const ReportsPage = lazy(() => import('@/features/reports/ReportsPage'));
+const ImportPage = lazy(() => import('@/features/import/ImportPage'));
 const SettingsPage = lazy(() => import('@/features/settings/SettingsPage'));
 
 export const router = createBrowserRouter([
@@ -34,6 +35,7 @@ export const router = createBrowserRouter([
           { path: 'goals', element: <GoalsPage /> },
           { path: 'recurring', element: <RecurringPage /> },
           { path: 'reports', element: <ReportsPage /> },
+          { path: 'import', element: <ImportPage /> },
           { path: 'settings', element: <SettingsPage /> },
           { path: '*', element: <NotFoundPage inApp /> },
         ],

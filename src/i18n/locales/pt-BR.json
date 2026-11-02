@@ -16,7 +16,8 @@
     "required": "Obrigatório",
     "save": "Salvar",
     "seeAll": "Ver tudo",
-    "today": "Hoje"
+    "today": "Hoje",
+    "back": "Voltar"
   },
   "nav": {
     "main": "Navegação principal",
@@ -46,10 +47,33 @@
     "hiddenAmount": "Valor oculto"
   },
   "palette": {
-    "open": "Busca e comandos"
+    "open": "Busca e comandos",
+    "title": "Paleta de comandos",
+    "placeholder": "Busque páginas e ações…",
+    "empty": "Nenhum comando encontrado",
+    "quickEntry": "Lançamento rápido",
+    "searchTransactions": "Buscar lançamentos",
+    "theme": "Tema: {{theme}}",
+    "groups": {
+      "go": "Ir para",
+      "actions": "Ações"
+    }
   },
   "quickEntry": {
-    "button": "Novo lançamento"
+    "button": "Novo lançamento",
+    "title": "Lançamento rápido",
+    "description": "Escreva do jeito que você falaria. A leitura acontece neste aparelho — nada é enviado.",
+    "inputLabel": "Descreva o lançamento",
+    "tryOne": "Experimente um destes",
+    "preview": "Prévia",
+    "fullForm": "Formulário completo",
+    "installments_one": "{{count}} parcela",
+    "installments_other": "{{count}} parcelas",
+    "weeklyOn": "Toda {{day}}",
+    "learned": "Regra aprendida",
+    "makeRecurring": "Salvar como recorrente",
+    "recurringCreated": "Recorrente criada",
+    "saved": "Salvo {{amount}} · {{description}}"
   },
   "sync": {
     "status": {
@@ -540,5 +564,56 @@
         "unsupported_version": "Este backup foi feito por uma versão mais nova do Fluxo."
       }
     }
+  },
+  "shortcuts": {
+    "title": "Atalhos de teclado",
+    "newEntry": "Novo lançamento (rápido)",
+    "search": "Buscar lançamentos",
+    "privacy": "Ligar/desligar modo privacidade",
+    "palette": "Paleta de comandos",
+    "help": "Mostrar atalhos",
+    "close": "Fechar janela"
+  },
+  "import": {
+    "title": "Importar extrato",
+    "subtitle": "OFX ou CSV do seu banco. Você revisa tudo antes de salvar.",
+    "target": "Importar para",
+    "targetHint": "A conta ou o cartão deste extrato.",
+    "drop": "Escolha um arquivo ou solte aqui",
+    "formats": "OFX (SGML ou XML) e CSV",
+    "privacy": "O arquivo é lido no seu navegador e nunca é enviado.",
+    "tooLarge": "Este arquivo é grande demais.",
+    "noRows": "Nenhum lançamento encontrado neste arquivo.",
+    "mapTitle": "Associe as colunas",
+    "mapBody": "Diga ao Fluxo qual coluna é qual em {{file}}.",
+    "column": "Coluna {{n}}",
+    "amountMode": "Valores",
+    "singleColumn": "Uma coluna com sinal",
+    "splitColumns": "Débito e crédito separados",
+    "debit": "Débito (saída)",
+    "credit": "Crédito (entrada)",
+    "dateFormat": "Formato da data",
+    "numberFormat": "Formato dos números",
+    "hasHeader": "A primeira linha é o cabeçalho",
+    "invert": "Inverter sinais",
+    "invertHint": "Alguns extratos de cartão mostram compras como valores positivos.",
+    "sample": "Primeiras linhas do arquivo",
+    "next": "Revisar lançamentos",
+    "skipped_one": "{{count}} linha não pôde ser lida e foi ignorada.",
+    "skipped_other": "{{count}} linhas não puderam ser lidas e foram ignoradas.",
+    "previewTitle": "Revise antes de importar",
+    "previewBody_one": "{{file}}: {{count}} lançamento novo.",
+    "previewBody_other": "{{file}}: {{count}} lançamentos novos.",
+    "duplicatesFound_one": "{{count}} duplicata desmarcada.",
+    "duplicatesFound_other": "{{count}} duplicatas desmarcadas.",
+    "duplicate": "Já importado",
+    "include": "Incluir {{name}}",
+    "categoryFor": "Categoria de {{name}}",
+    "confirm_one": "Importar {{count}}",
+    "confirm_other": "Importar {{count}}",
+    "done_one": "{{count}} lançamento importado",
+    "done_other": "{{count}} lançamentos importados",
+    "learned_one": "{{count}} nova regra de categorização aprendida",
+    "learned_other": "{{count}} novas regras de categorização aprendidas"
   }
 }

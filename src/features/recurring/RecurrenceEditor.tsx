@@ -46,11 +46,12 @@ export function RecurrenceEditor({
   const [active, setActive] = useState(recurrence?.active ?? true);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const weekdays = Array.from({ length: 7 }, (_, i) =>
-    new Intl.DateTimeFormat(locale, { weekday: 'long', timeZone: 'UTC' }).format(
-      new Date(Date.UTC(2026, 10, 1 + i)),
-    ),
-  );
+  const weekdays = Array.from({ length: 7 }, (_, i) => {
+    const name = new Intl.DateTimeFormat(locale, { weekday: 'long', timeZone: 'UTC' }).format(
+      new Date(Date.UTC(2026, 10, 1 + i)), // Nov 1 2026 is a Sunday
+    );
+    return name.charAt(0).toLocaleUpperCase(locale) + name.slice(1);
+  });
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
@@ -190,7 +191,7 @@ export function RecurrenceEditor({
           <Field label={t('recurring.weekday')}>
             <Select value={weekdayValue} onChange={(e) => setWeekdayValue(e.target.value)}>
               {weekdays.map((name, i) => (
-                <option key={name} value={i} className="capitalize">
+                <option key={name} value={i}>
                   {name}
                 </option>
               ))}
