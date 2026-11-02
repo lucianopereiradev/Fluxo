@@ -4,6 +4,7 @@ import { NotFoundPage } from './NotFoundPage';
 import LandingPage from '@/features/landing/LandingPage';
 import PrivacyPage from '@/features/landing/PrivacyPage';
 import { RootLayout } from './RootLayout';
+import { RouteError } from './RouteError';
 
 // Public pages ship in the main bundle; the app itself loads on demand.
 const loadAppShell = () => import('./AppShell');
@@ -30,12 +31,14 @@ const SettingsPage = lazy(() => import('@/features/settings/SettingsPage'));
 export const router = createBrowserRouter([
   {
     element: <RootLayout />,
+    errorElement: <RouteError />,
     children: [
       { path: '/', element: <LandingPage /> },
       { path: '/privacy', element: <PrivacyPage /> },
       {
         path: '/app',
         element: <AppShell />,
+        errorElement: <RouteError />,
         children: [
           { index: true, element: <OverviewPage /> },
           { path: 'transactions', element: <TransactionsPage /> },

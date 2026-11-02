@@ -657,7 +657,8 @@
     "empty": {
       "title": "Not enough data yet",
       "body": "Reports appear once you have income or expenses in the period."
-    }
+    },
+    "negative": "Below zero"
   },
   "settings": {
     "title": "Settings",
@@ -773,6 +774,11 @@
   "pwa": {
     "offlineReady": "Fluxo is ready to work offline",
     "updateAvailable": "A new version of Fluxo is available",
+    "reload": "Reload"
+  },
+  "routeError": {
+    "title": "Something went wrong on this screen",
+    "body": "Your data is safe on this device. Reloading usually fixes it.",
     "reload": "Reload"
   }
 }

@@ -657,7 +657,8 @@
     "empty": {
       "title": "Ainda não há dados suficientes",
       "body": "Os relatórios aparecem quando houver receitas ou despesas no período."
-    }
+    },
+    "negative": "Abaixo de zero"
   },
   "settings": {
     "title": "Configurações",
@@ -773,6 +774,11 @@
   "pwa": {
     "offlineReady": "O Fluxo já funciona offline",
     "updateAvailable": "Há uma nova versão do Fluxo",
+    "reload": "Recarregar"
+  },
+  "routeError": {
+    "title": "Algo deu errado nesta tela",
+    "body": "Seus dados estão seguros neste aparelho. Recarregar costuma resolver.",
     "reload": "Recarregar"
   }
 }

@@ -11,7 +11,7 @@ export function DemoBanner() {
   return (
     <div
       role="status"
-      className="border-warning/30 bg-warning-soft text-warning sticky top-0 z-40 flex items-center justify-center gap-3 border-b px-4 py-2 text-sm"
+      className="border-warning/30 bg-warning-soft text-warning flex flex-wrap items-center justify-center gap-3 border-b px-4 py-2 text-sm"
     >
       <FlaskConical className="size-4 shrink-0" aria-hidden />
       <span className="font-medium">{t('demo.banner')}</span>

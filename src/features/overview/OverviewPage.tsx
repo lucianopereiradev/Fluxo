@@ -185,7 +185,7 @@ export default function OverviewPage() {
         </Panel>
       )}
 
-      <div className="mt-4 grid gap-4 lg:grid-cols-3">
+      <div className="mt-4 grid items-start gap-4 lg:grid-cols-3">
         <Panel className="lg:col-span-2" aria-labelledby="forecast-title">
           <PanelHeader
             id="forecast-title"

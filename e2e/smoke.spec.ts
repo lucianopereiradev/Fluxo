@@ -29,6 +29,27 @@ test('demo → quick entry → the new transaction shows up', async ({ page, isM
   const row = page.getByRole('button', { name: /Smoke test coffee/ });
   await expect(row).toBeVisible();
   await expect(row).toContainText('12.90');
+
+  // Every app screen renders with the demo data (charts included).
+  for (const [path, heading] of <[string, string][]>[
+    ['/app/accounts', 'Accounts'],
+    ['/app/cards', 'Credit cards'],
+    ['/app/budgets', 'Budgets'],
+    ['/app/goals', 'Goals'],
+    ['/app/recurring', 'Recurring'],
+    ['/app/reports', 'Reports'],
+    ['/app/import', 'Import statement'],
+    ['/app/settings', 'Settings'],
+  ]) {
+    await page.goto(path);
+    await expect(page.getByRole('heading', { level: 1, name: heading })).toBeVisible();
+    if (path === '/app/reports') {
+      await expect(
+        page.getByRole('img', { name: 'Flow from income categories to expense categories' }),
+      ).toBeVisible();
+    }
+    await expect(page.getByText('Something went wrong')).toHaveCount(0);
+  }
 });
 
 test('the landing, privacy and 404 pages render', async ({ page }) => {

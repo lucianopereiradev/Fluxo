@@ -184,7 +184,7 @@ export function generateDemo({
   const card: Card = {
     ...stamp(start),
     name: 'Inter Gold',
-    limitCents: 600000,
+    limitCents: 1200000,
     closingDay: 3,
     dueDay: 10,
     paymentAccountId: checking.id,

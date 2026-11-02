@@ -104,7 +104,7 @@ export function Segmented<T extends string>({
           <label
             key={o.value}
             className={cn(
-              'relative flex flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-1 has-[:focus-visible]:outline-[var(--c-focus)]',
+              'relative flex flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium whitespace-nowrap transition-colors has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-1 has-[:focus-visible]:outline-[var(--c-focus)]',
               value === o.value ? 'bg-surface text-text shadow-soft' : 'text-muted hover:text-text',
             )}
           >

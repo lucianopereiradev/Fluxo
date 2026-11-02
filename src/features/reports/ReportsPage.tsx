@@ -251,12 +251,6 @@ export default function ReportsPage() {
             },
           })),
           barMaxWidth: 24,
-          markLine: {
-            silent: true,
-            symbol: 'none',
-            data: [{ yAxis: 0 }],
-            lineStyle: { color: theme.faint },
-          },
         },
       ],
     }),
@@ -284,29 +278,35 @@ export default function ReportsPage() {
         splitLine: { lineStyle: { color: theme.border, type: 'dashed' } },
       },
       // Below zero is drawn in the negative color *and* marked with a dashed zero line.
-      visualMap: {
-        show: false,
-        dimension: 1,
-        pieces: [
-          { lt: 0, color: theme.negative },
-          { gte: 0, color: theme.accent },
-        ],
-      },
       series: [
         {
           type: 'line',
           name: t('reports.balance'),
           data: forecast.days.map((d) => d.balanceCents),
           showSymbol: false,
-          lineStyle: { width: 2 },
-          areaStyle: { opacity: 0.1 },
-          markLine: {
-            silent: true,
-            symbol: 'none',
-            data: [{ yAxis: 0 }],
-            lineStyle: { color: theme.negative, type: 'dashed' },
-            label: { show: false },
-          },
+          lineStyle: { width: 2, color: theme.accent },
+          itemStyle: { color: theme.accent },
+          areaStyle: { opacity: 0.1, color: theme.accent },
+        },
+        {
+          // Days below zero, drawn again in the negative color (on top of the dashed zero line).
+          type: 'line',
+          name: t('reports.negative'),
+          data: forecast.days.map((d) => (d.balanceCents < 0 ? d.balanceCents : null)),
+          showSymbol: false,
+          connectNulls: false,
+          lineStyle: { width: 3, color: theme.negative },
+          itemStyle: { color: theme.negative },
+          areaStyle: { opacity: 0.15, color: theme.negative },
+        },
+        {
+          // Dashed zero line drawn as its own series (sturdier than markLine).
+          type: 'line',
+          data: forecast.days.map(() => 0),
+          showSymbol: false,
+          silent: true,
+          tooltip: { show: false },
+          lineStyle: { color: theme.negative, type: 'dashed', width: 1 },
         },
       ],
     }),

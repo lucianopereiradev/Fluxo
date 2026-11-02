@@ -221,10 +221,10 @@ export function AppLayout() {
       >
         {t('nav.skip')}
       </a>
-      <DemoBanner />
       <div className="flex flex-1">
         <Sidebar />
         <div className="flex min-w-0 flex-1 flex-col">
+          <DemoBanner />
           <MobileHeader onMore={() => setMoreOpen(true)} />
           <main
             id="main"
