@@ -7,7 +7,7 @@ conta nem login: tudo fica no IndexedDB do seu aparelho e funciona offline. Se v
 dados em mais de um aparelho, o Fluxo sincroniza por um cofre **criptografado de ponta a
 ponta** — o servidor só guarda bytes que ele não consegue ler.
 
-[English](README.md) · [Modelo de segurança](SECURITY.md) · [Guia de deploy](DEPLOY.md)
+[English](README.md) · [Modelo de segurança](SECURITY.md)
 
 ![Demonstração do Fluxo: visão geral, lançamento rápido, cartões, relatórios e orçamentos](docs/media/demo.gif)
 

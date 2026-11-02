@@ -15,8 +15,7 @@
     {
       "binding": "DB",
       "database_name": "fluxo",
-      // Replace with the id printed by `wrangler d1 create fluxo` (see DEPLOY.md).
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "3a900e52-fcad-459e-a0df-50a05dfa90ff",
       "migrations_dir": "worker/migrations",
     },
   ],

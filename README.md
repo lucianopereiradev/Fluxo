@@ -7,7 +7,7 @@ account and no login: everything lives in IndexedDB on your device and works off
 want your data on more than one device, Fluxo syncs it through a vault that is **encrypted end
 to end** — the server only ever stores bytes it cannot read.
 
-[Português](README.pt-BR.md) · [Security model](SECURITY.md) · [Deploy guide (PT)](DEPLOY.md)
+[Português](README.pt-BR.md) · [Security model](SECURITY.md)
 
 ![Fluxo demo: overview, quick entry, cards, reports and budgets](docs/media/demo.gif)
 
