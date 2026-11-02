@@ -1,12 +1,22 @@
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router';
-import { AppLayout } from './AppLayout';
 import { NotFoundPage } from './NotFoundPage';
+import LandingPage from '@/features/landing/LandingPage';
+import PrivacyPage from '@/features/landing/PrivacyPage';
 import { RootLayout } from './RootLayout';
 
-const LandingPage = lazy(() => import('@/features/landing/LandingPage'));
-const PrivacyPage = lazy(() => import('@/features/landing/PrivacyPage'));
-const OverviewPage = lazy(() => import('@/features/overview/OverviewPage'));
+// Public pages ship in the main bundle; the app itself loads on demand.
+const loadAppShell = () => import('./AppShell');
+const loadOverview = () => import('@/features/overview/OverviewPage');
+const AppShell = lazy(loadAppShell);
+
+// Opening the app directly: fetch the shell and the first screen in parallel, not one after the other.
+if (typeof location !== 'undefined' && location.pathname.startsWith('/app')) {
+  void loadAppShell();
+  if (location.pathname === '/app' || location.pathname === '/app/') void loadOverview();
+}
+
+const OverviewPage = lazy(loadOverview);
 const TransactionsPage = lazy(() => import('@/features/transactions/TransactionsPage'));
 const AccountsPage = lazy(() => import('@/features/accounts/AccountsPage'));
 const CardsPage = lazy(() => import('@/features/cards/CardsPage'));
@@ -25,7 +35,7 @@ export const router = createBrowserRouter([
       { path: '/privacy', element: <PrivacyPage /> },
       {
         path: '/app',
-        element: <AppLayout />,
+        element: <AppShell />,
         children: [
           { index: true, element: <OverviewPage /> },
           { path: 'transactions', element: <TransactionsPage /> },

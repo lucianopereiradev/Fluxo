@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Outlet, useLocation } from 'react-router';
 import { Toaster } from 'sonner';
 import { resolveTheme, useUi } from '@/stores/ui';
+import { UpdatePrompt } from './UpdatePrompt';
 
 /** Keeps <html> in sync with theme and privacy preferences. */
 function useDocumentPreferences() {
@@ -45,6 +46,7 @@ export function RootLayout() {
       <Suspense fallback={<div className="min-h-dvh" aria-busy aria-label={t('common.loading')} />}>
         <Outlet />
       </Suspense>
+      <UpdatePrompt />
       <Toaster
         theme={theme}
         position="bottom-center"

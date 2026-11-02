@@ -1,11 +1,16 @@
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
-import { CommandPalette } from '@/features/command-palette/CommandPalette';
-import { QuickEntryDialog } from '@/features/quick-entry/QuickEntryDialog';
 import { useUi } from '@/stores/ui';
 import { Modal } from '@/ui/Modal';
 import { Kbd } from '@/ui/primitives';
+
+const CommandPalette = lazy(() =>
+  import('@/features/command-palette/CommandPalette').then((m) => ({ default: m.CommandPalette })),
+);
+const QuickEntryDialog = lazy(() =>
+  import('@/features/quick-entry/QuickEntryDialog').then((m) => ({ default: m.QuickEntryDialog })),
+);
 
 function isTyping(target: EventTarget | null): boolean {
   const el = target as HTMLElement | null;
@@ -84,14 +89,22 @@ function ShortcutsDialog() {
 
 export function GlobalOverlays() {
   useShortcuts();
+  // The PWA "New entry" shortcut opens /app?quick=1.
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if (!params.has('quick')) return;
+    params.delete('quick');
+    history.replaceState(null, '', location.pathname + (params.size ? `?${params}` : ''));
+    useUi.getState().setQuickEntryOpen(true);
+  }, []);
   const quickEntryOpen = useUi((s) => s.quickEntryOpen);
   const paletteOpen = useUi((s) => s.paletteOpen);
   const shortcutsOpen = useUi((s) => s.shortcutsOpen);
   return (
-    <>
+    <Suspense fallback={null}>
       {quickEntryOpen && <QuickEntryDialog />}
       {paletteOpen && <CommandPalette />}
       {shortcutsOpen && <ShortcutsDialog />}
-    </>
+    </Suspense>
   );
 }

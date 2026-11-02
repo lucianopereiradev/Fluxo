@@ -230,7 +230,12 @@ export default function OverviewPage() {
         <Panel aria-labelledby="upcoming-title">
           <PanelHeader id="upcoming-title" title={t('overview.upcoming')} />
           {upcoming.length === 0 ? (
-            <EmptyState art="calendar" title={t('overview.noUpcoming')} className="py-6" />
+            <EmptyState
+              level={3}
+              art="calendar"
+              title={t('overview.noUpcoming')}
+              className="py-6"
+            />
           ) : (
             <ul className="divide-border divide-y px-2 pb-2">
               {upcoming.map((e) => (
@@ -269,7 +274,7 @@ export default function OverviewPage() {
             })}
           />
           {spendingList.length === 0 ? (
-            <EmptyState art="chart" title={t('overview.noSpending')} className="py-6" />
+            <EmptyState level={3} art="chart" title={t('overview.noSpending')} className="py-6" />
           ) : (
             <ul className="space-y-3 px-5 pb-5">
               {spendingList.slice(0, 7).map(([catId, cents]) => {
@@ -317,7 +322,7 @@ export default function OverviewPage() {
             }
           />
           {invoices.length === 0 ? (
-            <EmptyState art="card" title={t('overview.noInvoices')} className="py-6" />
+            <EmptyState level={3} art="card" title={t('overview.noInvoices')} className="py-6" />
           ) : (
             <ul className="divide-border divide-y px-2 pb-2">
               {invoices.flatMap(({ card, open, closed }) =>

@@ -1,16 +1,22 @@
 import { Eye, EyeOff, Menu, Monitor, Moon, Plus, Search, Sun } from 'lucide-react';
-import { Suspense, useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink, Outlet, useLocation } from 'react-router';
 import { DemoBanner } from '@/features/demo/DemoBanner';
 import { SyncIndicator, useSyncBootstrap } from '@/features/sync/SyncIndicator';
-import { TransactionEditor } from '@/features/transactions/TransactionEditor';
 import { useUi } from '@/stores/ui';
 import { Logo, LogoMark } from '@/ui/Logo';
 import { Modal } from '@/ui/Modal';
 import { Button, cn, IconButton, Kbd, Skeleton } from '@/ui/primitives';
 import { GlobalOverlays } from './GlobalOverlays';
 import { NAV_ITEMS } from './nav';
+
+// Dialogs (and the validation code they need) load the first time they open.
+const TransactionEditor = lazy(() =>
+  import('@/features/transactions/TransactionEditor').then((m) => ({
+    default: m.TransactionEditor,
+  })),
+);
 
 function ThemeIcon() {
   const theme = useUi((s) => s.theme);
@@ -233,7 +239,7 @@ export function AppLayout() {
       </div>
       <BottomNav onMore={() => setMoreOpen(true)} />
       <MoreSheet open={moreOpen} onClose={() => setMoreOpen(false)} />
-      {editor && <TransactionEditor key={editor.id} />}
+      <Suspense fallback={null}>{editor && <TransactionEditor key={editor.id} />}</Suspense>
       <GlobalOverlays />
     </div>
   );

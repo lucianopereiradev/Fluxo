@@ -164,10 +164,88 @@
   },
   "landing": {
     "title": "Your money, in flow. Your data, at home.",
-    "subtitle": "A calm, precise personal finance organizer that runs entirely on your device.",
+    "subtitle": "A calm, precise personal finance organizer that runs entirely in your browser. No account, no tracking — your financial data never leaves your device.",
     "tryDemo": "Try the demo",
     "startFresh": "Start fresh",
-    "openApp": "Open the app"
+    "openApp": "Open the app",
+    "nav": "Site navigation",
+    "footerNav": "Footer",
+    "privacyLink": "Privacy",
+    "github": "Source code",
+    "eyebrow": "Local-first · end-to-end encrypted",
+    "trust": "Free and open source · Works offline · English and Portuguese",
+    "preview": {
+      "safe": "Safe to spend today",
+      "amount": "R$ 142,80",
+      "perDay": "per day · 18 days left this month",
+      "quick": "Quick entry",
+      "quickExample": "lunch 32.50 yesterday nubank"
+    },
+    "pillarsTitle": "Built so your finances stay yours.",
+    "pillars": {
+      "local": {
+        "title": "Stays on your device",
+        "body": "Everything is stored in your browser’s IndexedDB. There is no server copy unless you turn on sync."
+      },
+      "noAccount": {
+        "title": "No account, no email",
+        "body": "Open it and start. Nobody — including us — knows who you are or what you spend."
+      },
+      "offline": {
+        "title": "Works offline",
+        "body": "Install it as an app on your phone or computer. It keeps working without a connection."
+      },
+      "sync": {
+        "title": "Encrypted sync, if you want",
+        "body": "Sync devices through a vault that only ever holds ciphertext. The key comes from your passphrase."
+      }
+    },
+    "featuresTitle": "Thoughtful where it matters.",
+    "features": {
+      "cards": {
+        "title": "Credit cards, the Brazilian way",
+        "body": "Closing and due days, installments that land on the right invoice, partial payments and the limit you really have left."
+      },
+      "safeToSpend": {
+        "title": "Safe to spend today",
+        "body": "Your balance minus what is still due this month, divided by the days left — with the full math one tap away."
+      },
+      "forecast": {
+        "title": "90-day forecast",
+        "body": "See the days your balance would dip, from recurring bills, installments and invoice due dates."
+      },
+      "quickEntry": {
+        "title": "Type it like you say it",
+        "body": "“lunch 32.50 yesterday nubank” becomes a transaction, parsed locally in English or Portuguese."
+      },
+      "import": {
+        "title": "Imports that learn",
+        "body": "OFX and CSV statements with duplicate detection. Fix a category once and Fluxo remembers it."
+      },
+      "budgets": {
+        "title": "Budgets, goals and reports",
+        "body": "Alerts at 80% and 100%, rollover, goal forecasts and a Sankey of where the money went."
+      }
+    },
+    "syncTitle": "How encrypted sync works",
+    "syncBody": "Sync is optional. When you turn it on, the server stores a single encrypted blob it cannot read.",
+    "syncSteps": {
+      "device": {
+        "title": "Your passphrase stays here",
+        "body": "Keys are derived on your device with PBKDF2 (600,000 rounds) and HKDF. The passphrase is never sent."
+      },
+      "cipher": {
+        "title": "Data is encrypted first",
+        "body": "A snapshot is compressed and sealed with AES-GCM before it leaves the browser."
+      },
+      "server": {
+        "title": "The server sees only noise",
+        "body": "It keeps ciphertext, its size and a version number — plus a hash of your access token, never the token."
+      }
+    },
+    "ctaTitle": "Take it for a spin.",
+    "ctaBody": "The demo loads six months of sample data, kept apart from your own.",
+    "footer": "Fluxo · MIT licensed · made by Luciano Pereira"
   },
   "notFound": {
     "title": "This page wandered off",
@@ -691,5 +769,10 @@
     "done_other": "{{count}} transactions imported",
     "learned_one": "Learned {{count}} new categorization rule",
     "learned_other": "Learned {{count}} new categorization rules"
+  },
+  "pwa": {
+    "offlineReady": "Fluxo is ready to work offline",
+    "updateAvailable": "A new version of Fluxo is available",
+    "reload": "Reload"
   }
 }

@@ -84,17 +84,21 @@ export function EmptyState({
   description,
   action,
   className,
+  level = 2,
 }: {
   art?: Art;
+  /** Heading level: 2 directly under a page title, 3 inside a titled panel. */
+  level?: 2 | 3;
   title: ReactNode;
   description?: ReactNode;
   action?: ReactNode;
   className?: string;
 }) {
+  const Heading = level === 3 ? 'h3' : 'h2';
   return (
     <div className={cn('flex flex-col items-center px-6 py-10 text-center', className)}>
       <Illustration art={art} />
-      <h3 className="font-display mt-4 text-lg font-medium">{title}</h3>
+      <Heading className="font-display mt-4 text-lg font-medium">{title}</Heading>
       {description && <p className="text-muted mt-1 max-w-sm text-sm">{description}</p>}
       {action && <div className="mt-5">{action}</div>}
     </div>

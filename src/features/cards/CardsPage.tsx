@@ -251,7 +251,7 @@ function CardDetail({ card, today, onEdit }: { card: Card; today: string; onEdit
         </div>
 
         {invoice.transactions.length === 0 && invoice.payments.length === 0 ? (
-          <EmptyState art="card" title={t('cards.emptyInvoice')} className="py-8" />
+          <EmptyState level={3} art="card" title={t('cards.emptyInvoice')} className="py-8" />
         ) : (
           <ul className="divide-border mt-3 divide-y">
             {invoice.transactions.map((tx) => {

@@ -70,16 +70,9 @@ function useToday(): LocalDate {
  */
 export function FinanceProvider({ children }: { children: ReactNode }) {
   const today = useToday();
-  const [booted, setBooted] = useState(false);
-
+  // Seeds categories and records due recurring entries; the UI does not wait for it.
   useEffect(() => {
-    let cancelled = false;
-    bootstrap()
-      .catch((error: unknown) => console.error('bootstrap failed', error))
-      .finally(() => !cancelled && setBooted(true));
-    return () => {
-      cancelled = true;
-    };
+    bootstrap().catch((error: unknown) => console.error('bootstrap failed', error));
   }, [today]);
 
   const raw = useLiveQuery(async () => {
@@ -127,7 +120,7 @@ export function FinanceProvider({ children }: { children: ReactNode }) {
       (a, b) => b.date.localeCompare(a.date) || b.createdAt.localeCompare(a.createdAt),
     );
     return {
-      ready: booted,
+      ready: true,
       today,
       accounts,
       cards,
@@ -142,7 +135,7 @@ export function FinanceProvider({ children }: { children: ReactNode }) {
       cardById: new Map(cards.map((c) => [c.id, c])),
       categoryById: new Map(categories.map((c) => [c.id, c])),
     };
-  }, [raw, booted, today]);
+  }, [raw, today]);
 
   return <FinanceContext.Provider value={value}>{children}</FinanceContext.Provider>;
 }

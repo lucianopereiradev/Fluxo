@@ -164,10 +164,88 @@
   },
   "landing": {
     "title": "Seu dinheiro em fluxo. Seus dados em casa.",
-    "subtitle": "Um organizador de finanças calmo e preciso, que roda inteiro no seu aparelho.",
+    "subtitle": "Um organizador de finanças calmo e preciso, que roda inteiro no seu navegador. Sem conta, sem rastreamento — seus dados financeiros nunca saem do seu aparelho.",
     "tryDemo": "Ver demonstração",
     "startFresh": "Começar do zero",
-    "openApp": "Abrir o app"
+    "openApp": "Abrir o app",
+    "nav": "Navegação do site",
+    "footerNav": "Rodapé",
+    "privacyLink": "Privacidade",
+    "github": "Código-fonte",
+    "eyebrow": "Local-first · criptografia de ponta a ponta",
+    "trust": "Gratuito e de código aberto · Funciona offline · Português e inglês",
+    "preview": {
+      "safe": "Quanto posso gastar hoje",
+      "amount": "R$ 142,80",
+      "perDay": "por dia · faltam 18 dias no mês",
+      "quick": "Lançamento rápido",
+      "quickExample": "almoço 32,50 ontem nubank"
+    },
+    "pillarsTitle": "Feito para suas finanças continuarem suas.",
+    "pillars": {
+      "local": {
+        "title": "Fica no seu aparelho",
+        "body": "Tudo é guardado no IndexedDB do seu navegador. Não existe cópia em servidor, a não ser que você ative a sincronização."
+      },
+      "noAccount": {
+        "title": "Sem conta, sem e-mail",
+        "body": "Abriu, começou. Ninguém — nem nós — sabe quem você é ou quanto você gasta."
+      },
+      "offline": {
+        "title": "Funciona offline",
+        "body": "Instale como app no celular ou no computador. Continua funcionando sem internet."
+      },
+      "sync": {
+        "title": "Sincronização criptografada, se quiser",
+        "body": "Sincronize aparelhos por um cofre que só guarda dados cifrados. A chave vem da sua frase-senha."
+      }
+    },
+    "featuresTitle": "Cuidadoso onde importa.",
+    "features": {
+      "cards": {
+        "title": "Cartão de crédito do jeito brasileiro",
+        "body": "Dia de fechamento e de vencimento, parcelas na fatura certa, pagamento parcial e o limite que realmente sobra."
+      },
+      "safeToSpend": {
+        "title": "Quanto posso gastar hoje",
+        "body": "Seu saldo menos o que ainda vence no mês, dividido pelos dias restantes — com a conta completa a um toque."
+      },
+      "forecast": {
+        "title": "Previsão de 90 dias",
+        "body": "Veja em que dias o saldo ficaria baixo, somando recorrências, parcelas e vencimentos de fatura."
+      },
+      "quickEntry": {
+        "title": "Escreva do jeito que você fala",
+        "body": "“almoço 32,50 ontem nubank” vira um lançamento, interpretado no próprio aparelho, em português ou inglês."
+      },
+      "import": {
+        "title": "Importação que aprende",
+        "body": "Extratos OFX e CSV com detecção de duplicatas. Corrija uma categoria uma vez e o Fluxo lembra."
+      },
+      "budgets": {
+        "title": "Orçamentos, metas e relatórios",
+        "body": "Alertas em 80% e 100%, sobra transportada, previsão das metas e um Sankey de para onde foi o dinheiro."
+      }
+    },
+    "syncTitle": "Como funciona a sincronização criptografada",
+    "syncBody": "A sincronização é opcional. Quando ativada, o servidor guarda um único bloco cifrado que ele não consegue ler.",
+    "syncSteps": {
+      "device": {
+        "title": "A frase-senha fica aqui",
+        "body": "As chaves são derivadas no seu aparelho com PBKDF2 (600 mil rodadas) e HKDF. A frase-senha nunca é enviada."
+      },
+      "cipher": {
+        "title": "Os dados são cifrados antes",
+        "body": "Um retrato dos dados é comprimido e selado com AES-GCM antes de sair do navegador."
+      },
+      "server": {
+        "title": "O servidor só vê ruído",
+        "body": "Ele guarda o texto cifrado, o tamanho e um número de versão — e um hash do seu token de acesso, nunca o token."
+      }
+    },
+    "ctaTitle": "Experimente.",
+    "ctaBody": "A demonstração carrega seis meses de dados fictícios, separados dos seus.",
+    "footer": "Fluxo · licença MIT · feito por Luciano Pereira"
   },
   "notFound": {
     "title": "Esta página se perdeu",
@@ -691,5 +769,10 @@
     "done_other": "{{count}} lançamentos importados",
     "learned_one": "{{count}} nova regra de categorização aprendida",
     "learned_other": "{{count}} novas regras de categorização aprendidas"
+  },
+  "pwa": {
+    "offlineReady": "O Fluxo já funciona offline",
+    "updateAvailable": "Há uma nova versão do Fluxo",
+    "reload": "Recarregar"
   }
 }

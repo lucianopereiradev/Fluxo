@@ -43,6 +43,10 @@ export default tseslint.config(
     rules: { 'no-restricted-syntax': 'off' },
   },
   {
+    files: ['public/**/*.js'],
+    languageOptions: { globals: globals.browser, sourceType: 'script' },
+  },
+  {
     files: ['worker/**/*.ts'],
     languageOptions: { globals: globals.serviceworker },
   },
