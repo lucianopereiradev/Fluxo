@@ -3,7 +3,7 @@ import { Suspense, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink, Outlet, useLocation } from 'react-router';
 import { DemoBanner } from '@/features/demo/DemoBanner';
-import { SyncIndicator } from '@/features/sync/SyncIndicator';
+import { SyncIndicator, useSyncBootstrap } from '@/features/sync/SyncIndicator';
 import { TransactionEditor } from '@/features/transactions/TransactionEditor';
 import { useUi } from '@/stores/ui';
 import { Logo, LogoMark } from '@/ui/Logo';
@@ -90,10 +90,12 @@ function MobileHeader({ onMore }: { onMore: () => void }) {
   const { t } = useTranslation();
   return (
     <header className="border-border bg-bg/85 sticky top-0 z-20 flex items-center justify-between border-b px-3 py-2 backdrop-blur md:hidden">
-      <Link to="/app" aria-label={t('nav.home')} className="flex items-center gap-2 px-1">
-        <LogoMark className="size-7" />
+      <div className="flex items-center gap-1">
+        <Link to="/app" aria-label={t('nav.home')} className="px-1">
+          <LogoMark className="size-7" />
+        </Link>
         <SyncIndicator compact />
-      </Link>
+      </div>
       <div className="flex items-center">
         <QuickActions compact />
         <IconButton label={t('nav.more')} onClick={onMore}>
@@ -204,6 +206,7 @@ export function AppLayout() {
   const { t } = useTranslation();
   const [moreOpen, setMoreOpen] = useState(false);
   const editor = useUi((s) => s.editor);
+  useSyncBootstrap();
   return (
     <div className="flex min-h-dvh flex-col">
       <a

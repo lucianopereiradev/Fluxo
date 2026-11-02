@@ -8,6 +8,10 @@ export default defineConfig({
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
   },
+  server: {
+    // In development the Worker runs separately (npm run worker:dev) and the API is proxied.
+    proxy: { '/api': 'http://localhost:8787' },
+  },
   build: {
     target: 'es2022',
     sourcemap: false,

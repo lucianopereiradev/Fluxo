@@ -9,3 +9,4 @@ test-results
 *.local
 .DS_Store
 .claude
+*.tsbuildinfo
