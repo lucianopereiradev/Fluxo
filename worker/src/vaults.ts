@@ -20,7 +20,8 @@ interface VaultRow {
   salt: string;
   auth_hash: string;
   version: number;
-  blob: ArrayBuffer | null;
+  /** D1 returns BLOB columns as plain number arrays. */
+  blob: number[] | ArrayBuffer | null;
   size: number;
 }
 
@@ -81,7 +82,8 @@ async function authorize(
 export async function readVault(request: Request, id: string, db: D1Database): Promise<Response> {
   const row = await authorize(request, id, db);
   if (row instanceof Response) return row;
-  return new Response(row.blob ?? null, {
+  const bytes = row.blob ? new Uint8Array(row.blob) : null;
+  return new Response(bytes, {
     status: 200,
     headers: {
       'Content-Type': 'application/octet-stream',
@@ -109,7 +111,7 @@ export async function writeVault(request: Request, id: string, db: D1Database): 
     .prepare(
       'UPDATE vaults SET blob = ?, size = ?, version = version + 1, updated_at = ? WHERE id = ? AND version = ?',
     )
-    .bind(body, body.byteLength, now, id, ifMatch.data)
+    .bind(new Uint8Array(body), body.byteLength, now, id, ifMatch.data)
     .run();
   if (!result.meta.changes) {
     const current = await db
